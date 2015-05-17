@@ -1,0 +1,304 @@
+ <html>
+<head>
+<meta charset="utf-8">
+<title>Best Login Page design in html and css</title>
+<style type="text/css">
+body {
+background-color: #f4f4f4;
+color: #5a5656;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+font-size: 16px;
+line-height: 1.5em;
+}
+a { text-decoration: none; }
+h1 { font-size: 1em; }
+h1, p {
+margin-bottom: 10px;
+}
+strong {
+font-weight: bold;
+}
+.uppercase { text-transform: uppercase; }
+
+/* ---------- LOGIN ---------- */
+#login {
+margin: 50px auto;
+width: 300px;
+}
+form fieldset input[type="text"], input[type="password"] {
+background-color: #e5e5e5;
+border: none;
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+color: #5a5656;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+font-size: 14px;
+height: 50px;
+outline: none;
+padding: 0px 10px;
+width: 280px;
+-webkit-appearance:none;
+}
+form fieldset input[type="submit"] {
+background-color: #008dde;
+border: none;
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+color: #f4f4f4;
+cursor: pointer;
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+height: 50px;
+text-transform: uppercase;
+width: 300px;
+-webkit-appearance:none;
+}
+form fieldset a {
+color: #5a5656;
+font-size: 10px;
+}
+form fieldset a:hover { text-decoration: underline; }
+.btn-round {
+background-color: #5a5656;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+color: #f4f4f4;
+display: block;
+font-size: 12px;
+height: 50px;
+line-height: 50px;
+margin: 30px 125px;
+text-align: center;
+text-transform: uppercase;
+width: 50px;
+}
+.facebook-before {
+background-color: #0064ab;
+border-radius: 3px 0px 0px 3px;
+-moz-border-radius: 3px 0px 0px 3px;
+-webkit-border-radius: 3px 0px 0px 3px;
+color: #f4f4f4;
+display: block;
+float: left;
+height: 50px;
+line-height: 50px;
+text-align: center;
+width: 50px;
+}
+.facebook {
+background-color: #0079ce;
+border: none;
+border-radius: 0px 3px 3px 0px;
+-moz-border-radius: 0px 3px 3px 0px;
+-webkit-border-radius: 0px 3px 3px 0px;
+color: #f4f4f4;
+cursor: pointer;
+height: 50px;
+text-transform: uppercase;
+width: 250px;
+}
+.twitter-before {
+background-color: #189bcb;
+border-radius: 3px 0px 0px 3px;
+-moz-border-radius: 3px 0px 0px 3px;
+-webkit-border-radius: 3px 0px 0px 3px;
+color: #f4f4f4;
+display: block;
+float: left;
+height: 50px;
+line-height: 50px;
+text-align: center;
+width: 50px;
+}
+.twitter {
+background-color: #1bb2e9;
+border: none;
+border-radius: 0px 3px 3px 0px;
+-moz-border-radius: 0px 3px 3px 0px;
+-webkit-border-radius: 0px 3px 3px 0px;
+color: #f4f4f4;
+cursor: pointer;
+height: 50px;
+text-transform: uppercase;
+width: 250px;
+}
+</style>
+<script src="https://apis.google.com/js/client:platform.js" async defer></script>
+<script type="text/javascript">
+function visitPage(){
+        window.location='facebook.html';
+    }
+function visitPage1(){
+        window.location='twitter.html';
+    }
+
+
+
+(function(){
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/client:plusone.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po,s);
+     })();
+
+function signinCallback(authResult) {
+  if (authResult['status']['signed_in']) {
+    // Update the app to reflect a signed in user
+    // Hide the sign-in button now that the user is authorized, for example:
+    document.getElementById('signinButton').setAttribute('style', 'display: none');
+
+gapi.client.load('plus','v1',function() {
+gapi.client.plus.people.get({
+'userId':'me'
+}).execute(function (result){
+document.getElementById('profile').innerHTML=
+JSON.stringify(result,null,2);
+});
+});
+  } else {
+    // Update the app to reflect a signed out user
+    // Possible error values:
+    //   "user_signed_out" - User is signed-out
+    //   "access_denied" - User denied access to your app
+    //   "immediate_failed" - Could not automatically log in the user
+    console.log('Sign-in state: ' + authResult['error']);
+  }
+}
+
+
+/*function disconnectUser(access_token) {
+  var revokeUrl = 'https://accounts.google.com/o/oauth2/revoke?token=' +
+      access_token;
+
+   Perform an asynchronous GET request.
+  $.ajax({
+    type: 'GET',
+    url: revokeUrl,
+    async: false,
+    contentType: "application/json",
+    dataType: 'jsonp',
+    success: function(nullResponse) {
+     Do something now that user is disconnected
+     The response is always undefined.
+    },
+    error: function(e) {
+       Handle the error
+       console.log(e);
+       You could point users to manually disconnect if unsuccessful
+       https://plus.google.com/apps
+}
+});
+}
+ Could trigger the disconnect on a button click
+$('#revokeButton').click(disconnectUser);
+
+
+
+profile: function(){
+   var user = gapi.client.plus.people.get( {'userId' : 'me'} );   user.execute(function(profile)){
+      $('#profile').append(
+            $('<p><img src=\"' + profile.image.url + '\"></p>')      );
+      $('#profile').append(
+            $('<p>Hello ' + profile.displayName + '</p>')
+      ); 
+   });
+}
+
+people: function() {
+      var request = gapi.client.plus.people.list({
+        'userId': 'me',
+        'collection': 'visible'
+      });
+      request.execute(function(people) {
+        for (var personIndex in people.items) {
+          person = people.items[personIndex];
+          $('#visiblePeople').append('<img src="' + 
+          person.image.url + '">');
+        }
+      });
+    }
+function moment(){
+ var postUrl = THE_PAGE_URL;
+ var payload={
+    'type': 'https://schemas.google.com/AddActivity',
+    'target': {'url':postUrl}
+ };
+ 
+    var moment  = {
+     'type':'http://schemas.google.com/AddActivity',
+     'target':{
+      'url':postUrl
+    }
+  };
+ 
+ var args = {
+  'path': '/plus/v1/people/me/moments/vault',
+  'method': 'POST',
+  'body': JSON.stringify(payload),
+  'callback': function(response) {
+   console.log(response);
+  }
+    };
+ gapi.client.request(args);
+}  */ 
+</script> 
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=467007176784566&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="login">
+<!--<h1><strong>Welcome.</strong> Please login.</h1>
+<form action="javascript:void(0);" method="get">
+<fieldset>
+<p><input type="text" required value="Username" onBlur="if(this.value=='')this.value='Username'" onFocus="if(this.value=='Username')this.value='' "></p>
+<p><input type="password" required value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "></p>
+<p><a href="#">Forgot Password?</a></p>
+<p><input type="submit" value="Login"></p>
+</fieldset>
+</form>
+<p><span class="btn-round">or</span></p>
+<p>
+<a class="facebook-before"></a>
+
+<input type="button" class="facebook" value="Login Using Facebook" onclick="visitPage()">
+</p>
+
+<p>
+<a class="twitter-before"></a>
+<input type="button" class="twitter" value="Login Using Twitter" onclick="visitPage1()">
+</p>-->
+<center><span id="signinButton">
+  <span
+    class="g-signin"
+    data-callback="signinCallback"
+    data-clientid="845882102494-i9v3osm50s8q1ju5ii3ontte5bsnq5kt.apps.googleusercontent.com"
+    data-cookiepolicy="single_host_origin"
+    data-requestvisibleactions="http://schema.org/AddAction"
+    data-scope="https://www.googleapis.com/auth/plus.login  https://www.googleapis.com/auth/fitness.body.read  https://www.googleapis.com/auth/fitness.body.write"
+    data-theme="dark">
+  </span>
+</span></center>
+
+<center><button
+  class="g-interactivepost"
+  data-contenturl="https://plus.google.com/pages/"
+  data-clientid="845882102494-b3pgnihj4hdi2d6ol6jp5fc6v8u3988p.apps.googleusercontent.com"
+  data-cookiepolicy="single_host_origin"
+  data-prefilltext="Engage your users today, create a Google+ page for your business."
+  data-calltoactionlabel="CREATE"
+  data-calltoactionurl="http://plus.google.com/pages/create">
+  Share this post</button></center>
+</div> <!-- end login -->
+<center><pre id="profile"></pre>
+<p>
+<div class="fb-like" data-href="http://localhost/fit.com/public_html/login.html" data-width="200px" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div></center>
+</p>
+</body>
+</html>

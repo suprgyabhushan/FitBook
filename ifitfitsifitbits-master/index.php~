@@ -1,0 +1,7 @@
+<?php
+    require_once __DIR__.'/../app/init.php';
+
+    require_once ROUTES_PATH.'/../app/all.php';
+
+    $app->run();
+?>

@@ -1,0 +1,1190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta content="width=300, initial-scale=1" name="viewport">
+  <meta name="robots" content="noindex">
+  <meta name="google-site-verification" content="LrdTUW9psUAMbh4Ia074-BPEVmcpBxF6Gwf0MSgQXZs">
+  <title>Sign in - Google Accounts</title>
+  <style>
+  @font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2) format('woff2'), url(//fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(//fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(//fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+  </style>
+  <style>
+  h1, h2 {
+  -webkit-animation-duration: 0.1s;
+  -webkit-animation-name: fontfix;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0;
+  }
+  @-webkit-keyframes fontfix {
+  from {
+  opacity: 1;
+  }
+  to {
+  opacity: 1;
+  }
+  }
+  </style>
+<style>
+  html, body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  height: 100%;
+  min-width: 100%;
+  font-size: 13px;
+  color: #404040;
+  direction: ltr;
+  -webkit-text-size-adjust: none;
+  }
+  button,
+  input[type=button],
+  input[type=submit] {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  }
+  a,
+  a:hover,
+  a:visited {
+  color: #427fed;
+  cursor: pointer;
+  text-decoration: none;
+  }
+  a:hover {
+  text-decoration: underline;
+  }
+  h1 {
+  font-size: 20px;
+  color: #262626;
+  margin: 0 0 15px;
+  font-weight: normal;
+  }
+  h2 {
+  font-size: 14px;
+  color: #262626;
+  margin: 0 0 15px;
+  font-weight: bold;
+  }
+  input[type=email],
+  input[type=number],
+  input[type=password],
+  input[type=tel],
+  input[type=text],
+  input[type=url] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  height: 36px;
+  padding: 0 8px;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  font-size: 15px;
+  color: #404040;
+  }
+  input[type=email]:hover,
+  input[type=number]:hover,
+  input[type=password]:hover,
+  input[type=tel]:hover,
+  input[type=text]:hover,
+  input[type=url]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  }
+  input[type=email]:focus,
+  input[type=number]:focus,
+  input[type=password]:focus,
+  input[type=tel]:focus,
+  input[type=text]:focus,
+  input[type=url]:focus {
+  outline: none;
+  border: 1px solid #4d90fe;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  }
+  input[type=checkbox],
+  input[type=radio] {
+  -webkit-appearance: none;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  cursor: pointer;
+  vertical-align: bottom;
+  background: #fff;
+  border: 1px solid #c6c6c6;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  }
+  input[type=checkbox]:active,
+  input[type=radio]:active {
+  background: #ebebeb;
+  }
+  input[type=checkbox]:hover {
+  border-color: #c6c6c6;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  }
+  input[type=radio] {
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  width: 15px;
+  height: 15px;
+  }
+  input[type=checkbox]:checked,
+  input[type=radio]:checked {
+  background: #fff;
+  }
+  input[type=radio]:checked::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  background: #666;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  }
+  input[type=checkbox]:checked::after {
+  content: url(//ssl.gstatic.com/ui/v1/menu/checkmark.png);
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: -5px;
+  }
+  input[type=checkbox]:focus {
+  outline: none;
+  border-color: #4d90fe;
+  }
+  .stacked-label {
+  display: block;
+  font-weight: bold;
+  margin: .5em 0;
+  }
+  .hidden-label {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  }
+  input[type=checkbox].form-error,
+  input[type=email].form-error,
+  input[type=number].form-error,
+  input[type=password].form-error,
+  input[type=text].form-error,
+  input[type=tel].form-error,
+  input[type=url].form-error {
+  border: 1px solid #dd4b39;
+  }
+  .error-msg {
+  margin: .5em 0;
+  display: block;
+  color: #dd4b39;
+  line-height: 17px;
+  }
+  .help-link {
+  background: #dd4b39;
+  padding: 0 5px;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  text-decoration: none;
+  position: relative;
+  top: 0px;
+  }
+  .help-link:visited {
+  color: #fff;
+  }
+  .help-link:hover {
+  color: #fff;
+  background: #c03523;
+  text-decoration: none;
+  }
+  .help-link:active {
+  opacity: 1;
+  background: #ae2817;
+  }
+  .wrapper {
+  position: relative;
+  min-height: 100%;
+  }
+  .content {
+  padding: 0 44px;
+  }
+  .main {
+  padding-bottom: 100px;
+  }
+  /* For modern browsers */
+  .clearfix:before,
+  .clearfix:after {
+  content: "";
+  display: table;
+  }
+  .clearfix:after {
+  clear: both;
+  }
+  /* For IE 6/7 (trigger hasLayout) */
+  .clearfix {
+  zoom:1;
+  }
+  .google-header-bar {
+  height: 71px;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  }
+  .header .logo {
+  margin: 17px 0 0;
+  float: left;
+  height: 38px;
+  width: 116px;
+  }
+  .header .secondary-link {
+  margin: 28px 0 0;
+  float: right;
+  }
+  .header .secondary-link a {
+  font-weight: normal;
+  }
+  .google-header-bar.centered {
+  border: 0;
+  height: 108px;
+  }
+  .google-header-bar.centered .header .logo {
+  float: none;
+  margin: 40px auto 30px;
+  display: block;
+  }
+  .google-header-bar.centered .header .secondary-link {
+  display: none
+  }
+  .google-footer-bar {
+  position: absolute;
+  bottom: 0;
+  height: 35px;
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  overflow: hidden;
+  }
+  .footer {
+  padding-top: 7px;
+  font-size: .85em;
+  white-space: nowrap;
+  line-height: 0;
+  }
+  .footer ul {
+  float: left;
+  max-width: 80%;
+  min-height: 16px;
+  padding: 0;
+  }
+  .footer ul li {
+  color: #737373;
+  display: inline;
+  padding: 0;
+  padding-right: 1.5em;
+  }
+  .footer a {
+  color: #737373;
+  }
+  .lang-chooser-wrap {
+  float: right;
+  display: inline;
+  }
+  .lang-chooser-wrap img {
+  vertical-align: top;
+  }
+  .lang-chooser {
+  font-size: 13px;
+  height: 24px;
+  line-height: 24px;
+  }
+  .lang-chooser option {
+  font-size: 13px;
+  line-height: 24px;
+  }
+  .hidden {
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  display: none !important;
+  }
+  .banner {
+  text-align: center;
+  }
+  .card {
+  background-color: #f7f7f7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  width: 304px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  .card > *:first-child {
+  margin-top: 0;
+  }
+  .rc-button,
+  .rc-button:visited {
+  display: inline-block;
+  min-width: 46px;
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+  line-height: 36px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -o-transition: all 0.218s;
+  -moz-transition: all 0.218s;
+  -webkit-transition: all 0.218s;
+  transition: all 0.218s;
+  border: 1px solid #dcdcdc;
+  background-color: #f5f5f5;
+  background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -moz-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -ms-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -o-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: linear-gradient(top,#f5f5f5,#f1f1f1);
+  -o-transition: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  }
+  .card .rc-button {
+  width: 100%;
+  padding: 0;
+  }
+  .rc-button.disabled,
+  .rc-button[disabled] {
+  opacity: .5;
+  filter: alpha(opacity=50);
+  cursor: default;
+  pointer-events: none;
+  }
+  .rc-button:hover {
+  border: 1px solid #c6c6c6;
+  color: #333;
+  text-decoration: none;
+  -o-transition: all 0.0s;
+  -moz-transition: all 0.0s;
+  -webkit-transition: all 0.0s;
+  transition: all 0.0s;
+  background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -moz-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  }
+  .rc-button:active {
+  background-color: #f6f6f6;
+  background-image: -webkit-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: -moz-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: -ms-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: -o-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: linear-gradient(top,#f6f6f6,#f1f1f1);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  .rc-button-submit,
+  .rc-button-submit:visited {
+  border: 1px solid #3079ed;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #4d90fe;
+  background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+  background-image: -moz-linear-gradient(top,#4d90fe,#4787ed);
+  background-image: -ms-linear-gradient(top,#4d90fe,#4787ed);
+  background-image: -o-linear-gradient(top,#4d90fe,#4787ed);
+  background-image: linear-gradient(top,#4d90fe,#4787ed);
+  }
+  .rc-button-submit:hover {
+  border: 1px solid #2f5bb7;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -moz-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -ms-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -o-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: linear-gradient(top,#4d90fe,#357ae8);
+  }
+  .rc-button-submit:active {
+  background-color: #357ae8;
+  background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -moz-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -ms-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -o-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: linear-gradient(top,#4d90fe,#357ae8);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  }
+  .rc-button-red,
+  .rc-button-red:visited {
+  border: 1px solid transparent;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #d14836;
+  background-image: -webkit-linear-gradient(top,#dd4b39,#d14836);
+  background-image: -moz-linear-gradient(top,#dd4b39,#d14836);
+  background-image: -ms-linear-gradient(top,#dd4b39,#d14836);
+  background-image: -o-linear-gradient(top,#dd4b39,#d14836);
+  background-image: linear-gradient(top,#dd4b39,#d14836);
+  }
+  .rc-button-red:hover {
+  border: 1px solid #b0281a;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #c53727;
+  background-image: -webkit-linear-gradient(top,#dd4b39,#c53727);
+  background-image: -moz-linear-gradient(top,#dd4b39,#c53727);
+  background-image: -ms-linear-gradient(top,#dd4b39,#c53727);
+  background-image: -o-linear-gradient(top,#dd4b39,#c53727);
+  background-image: linear-gradient(top,#dd4b39,#c53727);
+  }
+  .rc-button-red:active {
+  border: 1px solid #992a1b;
+  background-color: #b0281a;
+  background-image: -webkit-linear-gradient(top,#dd4b39,#b0281a);
+  background-image: -moz-linear-gradient(top,#dd4b39,#b0281a);
+  background-image: -ms-linear-gradient(top,#dd4b39,#b0281a);
+  background-image: -o-linear-gradient(top,#dd4b39,#b0281a);
+  background-image: linear-gradient(top,#dd4b39,#b0281a);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  }
+  .secondary-actions {
+  text-align: center;
+  }
+</style>
+<style media="">
+  .google-header-bar.centered {
+  height: 83px;
+  }
+  .google-header-bar.centered .header .logo {
+  margin: 25px auto 20px;
+  }
+  .card {
+  margin-bottom: 20px;
+  }
+</style>
+<style media="">
+  html, body {
+  font-size: 14px;
+  }
+  .google-header-bar.centered {
+  height: 73px;
+  }
+  .google-header-bar.centered .header .logo {
+  margin: 20px auto 15px;
+  }
+  .content {
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+  .hidden-small {
+  display: none;
+  }
+  .card {
+  padding: 20px 15px 30px;
+  width: 270px;
+  }
+  .footer ul li {
+  padding-right: 1em;
+  }
+  .lang-chooser-wrap {
+  display: none;
+  }
+</style>
+<style>
+  pre.debug {
+  font-family: monospace;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 1.5em;
+  font-size: 13px;
+  background: #f1f1f1;
+  border-top: 1px solid #e5e5e5;
+  direction: ltr;
+  white-space: pre-wrap;
+  width: 90%;
+  overflow: hidden;
+  }
+</style>
+<style>
+ .action-card {
+  padding: 5px;
+  width: 344px;
+  }
+  .action-card ul {
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  }
+  .action-card ul li a,
+  .action-card ul li form,
+  .action-card ul li input[type="submit"] {
+  color: #427fed;
+  cursor: pointer;
+  text-decoration: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: inline-block;
+  background: none;
+  text-align: center;
+  padding: 12px 0;
+  outline: none;
+  text-decoration: none;
+  border: 0;
+  }
+  .action-card ul li a:hover,
+  .action-card ul li a:visited,
+  .action-card ul li input[type="submit"]:hover {
+  text-decoration: none;
+  }
+  .action-card ul li a.arrow-action {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 304px;
+  margin: 0 auto;
+  display: block;
+  text-align: left;
+  background: url(//ssl.gstatic.com/accounts/ui/arrow_right_1x.png) right center no-repeat;
+  background-size: 21px 21px;
+  }
+  .action-card ul.dual-action li {
+  width: 49%;
+  display: inline-block;
+  }
+ .action-card ul.dual-action li:first-child {
+  border-right: 1px solid #d5d5d5;
+  }
+</style>
+<style media="">
+ .action-card {
+  width: 290px;
+  }
+ .action-card ul li a.arrow-action {
+  width: 270px;
+  }
+</style>
+<style media="screen and (-webkit-min-device-pixel-ratio: 1.3), screen and (min-resolution: 144dpi)">
+  .action-card ul li a.arrow-action {
+  background-image: url(//ssl.gstatic.com/accounts/ui/arrow_right_2x.png)
+  }
+</style>
+<style>
+  .jfk-tooltip {
+  background-color: #fff;
+  border: 1px solid;
+  color: #737373;
+  font-size: 12px;
+  position: absolute;
+  z-index: 800 !important;
+  border-color: #bbb #bbb #a8a8a8;
+  padding: 16px;
+  width: 250px;
+  }
+ .jfk-tooltip h3 {
+  color: #555;
+  font-size: 12px;
+  margin: 0 0 .5em;
+  }
+ .jfk-tooltip-content p:last-child {
+  margin-bottom: 0;
+  }
+  .jfk-tooltip-arrow {
+  position: absolute;
+  }
+  .jfk-tooltip-arrow .jfk-tooltip-arrowimplbefore,
+  .jfk-tooltip-arrow .jfk-tooltip-arrowimplafter {
+  display: block;
+  height: 0;
+  position: absolute;
+  width: 0;
+  }
+  .jfk-tooltip-arrow .jfk-tooltip-arrowimplbefore {
+  border: 9px solid;
+  }
+  .jfk-tooltip-arrow .jfk-tooltip-arrowimplafter {
+  border: 8px solid;
+  }
+  .jfk-tooltip-arrowdown {
+  bottom: 0;
+  }
+  .jfk-tooltip-arrowup {
+  top: -9px;
+  }
+  .jfk-tooltip-arrowleft {
+  left: -9px;
+  top: 30px;
+  }
+  .jfk-tooltip-arrowright {
+  right: 0;
+  top: 30px;
+  }
+  .jfk-tooltip-arrowdown .jfk-tooltip-arrowimplbefore,.jfk-tooltip-arrowup .jfk-tooltip-arrowimplbefore {
+  border-color: #bbb transparent;
+  left: -9px;
+  }
+  .jfk-tooltip-arrowdown .jfk-tooltip-arrowimplbefore {
+  border-color: #a8a8a8 transparent;
+  }
+  .jfk-tooltip-arrowdown .jfk-tooltip-arrowimplafter,.jfk-tooltip-arrowup .jfk-tooltip-arrowimplafter {
+  border-color: #fff transparent;
+  left: -8px;
+  }
+  .jfk-tooltip-arrowdown .jfk-tooltip-arrowimplbefore {
+  border-bottom-width: 0;
+  }
+  .jfk-tooltip-arrowdown .jfk-tooltip-arrowimplafter {
+  border-bottom-width: 0;
+  }
+  .jfk-tooltip-arrowup .jfk-tooltip-arrowimplbefore {
+  border-top-width: 0;
+  }
+  .jfk-tooltip-arrowup .jfk-tooltip-arrowimplafter {
+  border-top-width: 0;
+  top: 1px;
+  }
+  .jfk-tooltip-arrowleft .jfk-tooltip-arrowimplbefore,
+  .jfk-tooltip-arrowright .jfk-tooltip-arrowimplbefore {
+  border-color: transparent #bbb;
+  top: -9px;
+  }
+  .jfk-tooltip-arrowleft .jfk-tooltip-arrowimplafter,
+  .jfk-tooltip-arrowright .jfk-tooltip-arrowimplafter {
+  border-color:transparent #fff;
+  top:-8px;
+  }
+  .jfk-tooltip-arrowleft .jfk-tooltip-arrowimplbefore {
+  border-left-width: 0;
+  }
+  .jfk-tooltip-arrowleft .jfk-tooltip-arrowimplafter {
+  border-left-width: 0;
+  left: 1px;
+  }
+  .jfk-tooltip-arrowright .jfk-tooltip-arrowimplbefore {
+  border-right-width: 0;
+  }
+  .jfk-tooltip-arrowright .jfk-tooltip-arrowimplafter {
+  border-right-width: 0;
+  }
+  .jfk-tooltip-closebtn {
+  background: url("//ssl.gstatic.com/ui/v1/icons/common/x_8px.png") no-repeat;
+  border: 1px solid transparent;
+  height: 21px;
+  opacity: .4;
+  outline: 0;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 21px;
+  }
+  .jfk-tooltip-closebtn:focus,
+  .jfk-tooltip-closebtn:hover {
+  opacity: .8;
+  cursor: pointer;
+  }
+  .jfk-tooltip-closebtn:focus {
+  border-color: #4d90fe;
+  }
+</style>
+<style media="">
+  .jfk-tooltip {
+  display: none;
+  }
+</style>
+<style>
+  .accountchooser-card {
+  padding: 0;
+  width: 354px;
+  }
+  .accountchooser-card ol {
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  }
+  .accountchooser-card ol li {
+  height: 76px;
+  border-bottom: 1px solid #d5d5d5;
+  }
+  .accountchooser-card ol li.removed-all-notice {
+  padding: 15px;
+  height: auto;
+  padding-left: 28px;
+  background: url(//ssl.gstatic.com/accounts/ui/info_1x.png) 5px 12px no-repeat;
+  background-size: 24px 24px;
+  }
+  .accountchooser-card ol li button,
+  .accountchooser-card ol li .remove-entry {
+  padding: 15px 20px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  background: url(//ssl.gstatic.com/accounts/ui/arrow_right_1x.png) right center no-repeat;
+  background-size: 21px 21px;
+  background-position: 308px center;
+  text-overflow: ellipsis;
+  }
+  .accountchooser-card ol li button {
+  padding: 0;
+  }
+  .accountchooser-card ol li button::-moz-focus-inner {
+  padding: 15px 20px;
+  border: 0;
+  }
+  .accountchooser-card ol li button {
+  border-left: 4px solid transparent;
+  }
+  .accountchooser-card ol li button:focus {
+  border-left: 4px solid #4c8aff;
+  }
+  .accountchooser-card ol li .remove-entry {
+  height: 46px;
+  text-decoration: none;
+  }
+  .accountchooser-card ol li a.remove-entry {
+  width: 304px;
+  }
+  .accountchooser-card ol.edit-list li button,
+  .accountchooser-card ol.edit-list li .remove-entry {
+  background: url(//ssl.gstatic.com/accounts/ui/delete_1x.png) 308px center no-repeat;
+  background-size: 21px 21px;
+  }
+  .accountchooser-card ol li button img,
+  .accountchooser-card ol li .remove-entry img {
+  float: left;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  height: 46px;
+  width: 46px;
+  }
+  .accountchooser-card ol li button span,
+  .accountchooser-card ol li .remove-entry span {
+  display: block;
+  margin-left: 58px;
+  padding-right: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  .accountchooser-card ol li button span.account-name,
+  .accountchooser-card ol li .remove-entry span.account-name {
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 3px;
+  color: #427fed;
+  }
+  .accountchooser-card ol li button span.account-email,
+  .accountchooser-card ol li .remove-entry span.account-email {
+  font-size: 14px;
+  color: #404040
+  }
+  .accountchooser-card ol li .email-only span.account-email {
+  padding-top: 14px;
+  }
+  .accountchooser-card ol li .remove-entry .simple-email {
+  color: #404040;
+  line-height: 46px;
+  margin: 0;
+  }
+  .accountchooser-tooltip {
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  left: 50%;
+  top: 90px;
+  margin-left: 160px;
+  }
+  .action-card ul li a:hover,
+  .action-card ul li a:visited,
+  .action-card ul li input[type="submit"]:hover,
+  .action-card ul li a:focus {
+  text-decoration: underline;
+  }
+</style>
+<style media="">
+  .accountchooser-tooltip {
+  top: 65px;
+  }
+</style>
+<style media="">
+  .accountchooser-card {
+  width: 300px;
+  }
+  .accountchooser-card ol li button,
+  .accountchooser-card ol li .remove-entry,
+  .accountchooser-card ol.edit-list li button,
+  .accountchooser-card ol.edit-list li .remove-entry {
+  background-position: 254px center;
+  }
+</style>
+<style media="screen and (-webkit-min-device-pixel-ratio: 1.3), screen and (min-resolution: 144dpi)">
+  .accountchooser-card ol li.removed-all-notice {
+  background-image: url(//ssl.gstatic.com/accounts/ui/info_2x.png);
+  }
+  .accountchooser-card ol li button,
+  .accountchooser-card ol li .remove-entry {
+  background-image: url(//ssl.gstatic.com/accounts/ui/arrow_right_2x.png)
+  }
+  .accountchooser-card ol.edit-list li button,
+  .accountchooser-card ol.edit-list li .remove-entry {
+  background-image: url(//ssl.gstatic.com/accounts/ui/delete_2x.png);
+  }
+</style>
+  </head>
+  <body>
+  <div class="wrapper">
+  <div class="google-header-bar  centered">
+  <div class="header content clearfix">
+  <img alt="Google" class="logo" src="//ssl.gstatic.com/accounts/ui/logo_2x.png">
+  </div>
+  </div>
+  <div class="main content clearfix">
+<div class="banner">
+  <h1 id="accountchooser-title">
+  Choose an account
+  </h1>
+</div>
+<div id="accountchooser-card" class="card accountchooser-card">
+  <form id="gaia_loginform" action="https://accounts.google.com/AccountChooser" method="post">
+  <input name="continue" type="hidden" value="https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/fitness.activity.read&amp;response_type=code&amp;redirect_uri=http://localhost/fit.com/public_html/oauth2callback.php&amp;access_type=online&amp;client_id=827824362102-358evrp7j10clqooa99cd0n4ks6j49tl.apps.googleusercontent.com&amp;type=code&amp;hl=en&amp;from_login=1&amp;as=-71309ba829979336">
+  <input name="service" type="hidden" value="lso">
+  <input name="ltmpl" type="hidden" value="popup">
+  <input name="shdf" type="hidden" value="CnoLEhF0aGlyZFBhcnR5TG9nb1VybBoADAsSFXRoaXJkUGFydHlEaXNwbGF5TmFtZRoNR29vZ2xlRmVlZEJpdAwLEgZkb21haW4aDUdvb2dsZUZlZWRCaXQMCxIVdGhpcmRQYXJ0eURpc3BsYXlUeXBlGgdERUZBVUxUDBIDbHNvIhTG6-FgmOWuY-IYt5q59avNydoGTigBMhTsMZVZd8rchU-lzw46my0S17Rv1w">
+  <input name="scc" type="hidden" value="1">
+  <input name="sarp" type="hidden" value="1">
+  <ol class="accounts " id="account-list">
+  <li id="account-suprgya@gmail.com">
+  <button type="submit"
+            
+            id="choose-account-0" name="Email"
+            value="suprgya@gmail.com">
+  <img class="account-image" alt=""
+                 src="//lh4.googleusercontent.com/-OZe2sG28FwE/AAAAAAAAAAI/AAAAAAAAAAA/Mq0DH-U_aTs/photo.jpg?sz=46"
+                 id="account-image-0">
+  <span class="account-name">Suprgya Bhushan</span>
+  <span class="account-email" id="account-email-0">
+  suprgya@gmail.com
+  </span>
+  </button>
+  </li>
+  <li id="account-anshumaan.agrawal@gmail.com">
+  <button type="submit"
+            
+            id="choose-account-1" name="Email"
+            value="anshumaan.agrawal@gmail.com">
+  <img class="account-image" alt=""
+                 src="//lh3.googleusercontent.com/-UKubQmMr0lc/AAAAAAAAAAI/AAAAAAAAAAA/aWCH1I00zCs/photo.jpg?sz=46"
+                 id="account-image-1">
+  <span class="account-name">Anshumaan Agrawal</span>
+  <span class="account-email" id="account-email-1">
+  anshumaan.agrawal@gmail.com
+  </span>
+  </button>
+  </li>
+  </ol>
+  </form>
+</div>
+<div class="card action-card">
+  <ul id="account-chooser-options"
+        class="dual-action">
+  <li>
+  <a id="account-chooser-add-account"
+          href="https://accounts.google.com/ServiceLogin?sacu=1&amp;scc=1&amp;continue=https%3A%2F%2Faccounts.google.com%2Fo%2Foauth2%2Fauth%3Fscope%3Dhttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffitness.activity.read%26response_type%3Dcode%26redirect_uri%3Dhttp%3A%2F%2Flocalhost%2Ffit.com%2Fpublic_html%2Foauth2callback.php%26access_type%3Donline%26client_id%3D827824362102-358evrp7j10clqooa99cd0n4ks6j49tl.apps.googleusercontent.com%26type%3Dcode%26hl%3Den%26from_login%3D1%26as%3D-71309ba829979336&amp;shdf=CnoLEhF0aGlyZFBhcnR5TG9nb1VybBoADAsSFXRoaXJkUGFydHlEaXNwbGF5TmFtZRoNR29vZ2xlRmVlZEJpdAwLEgZkb21haW4aDUdvb2dsZUZlZWRCaXQMCxIVdGhpcmRQYXJ0eURpc3BsYXlUeXBlGgdERUZBVUxUDBIDbHNvIhTG6-FgmOWuY-IYt5q59avNydoGTigBMhTsMZVZd8rchU-lzw46my0S17Rv1w&amp;service=lso&amp;ltmpl=popup&amp;sarp=1">
+  Add account
+  </a>
+  </li>
+  <li id="account-chooser-remove-form">
+  <form action="https://accounts.google.com/AccountChooser" method="post">
+  <input type="hidden" name="acum" value="REMOVE">
+  <input type="submit"
+                value="Remove">
+  </form>
+  </li>
+  </ul>
+</div>
+  </div>
+  <div class="google-footer-bar">
+  <div class="footer content clearfix">
+  <ul id="footer-list">
+  <li>
+  <a href="https://www.google.com/intl/en/about" target="_blank">
+  About Google
+  </a>
+  </li>
+  <li>
+  <a href="https://accounts.google.com/TOS?loc=IN&hl=en&privacy=true" target="_blank">
+  Privacy
+  </a>
+  </li>
+  <li>
+  <a href="https://accounts.google.com/TOS?loc=IN&hl=en" target="_blank">
+  Terms
+  </a>
+  </li>
+  <li>
+  <a href="http://www.google.com/support/accounts?hl=en" target="_blank">
+  Help
+  </a>
+  </li>
+  </ul>
+  </div>
+</div>
+  </div>
+<script type="text/javascript">
+  var gaia_attachEvent = function(element, event, callback) {
+  if (element.addEventListener) {
+  element.addEventListener(event, callback, false);
+  } else if (element.attachEvent) {
+  element.attachEvent('on' + event, callback);
+  }
+  };
+</script>
+  <script>var f=this,g=function(e,d){var a=e.split("."),b=f;a[0]in b||!b.execScript||b.execScript("var "+a[0]);for(var c;a.length&&(c=a.shift());)a.length||void 0===d?b[c]?b=b[c]:b=b[c]={}:b[c]=d};var h=function(){try{return new XMLHttpRequest}catch(e){for(var d=["MSXML2.XMLHTTP.6.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"],a=0;a<d.length;a++)try{return new ActiveXObject(d[a])}catch(b){}}return null};g("gaia.ajax.newXmlHttpRequest",h);var k=function(){this.a=h();this.parameters={}};g("gaia.ajax.XmlHttpFormRequest",k);
+k.prototype.send=function(e,d){var a=[],b;for(b in this.parameters)a.push(b+"="+encodeURIComponent(this.parameters[b]));var a=a.join("&"),c=this.a;c.open("POST",e,!0);c.setRequestHeader("Content-type","application/x-www-form-urlencoded");c.onreadystatechange=function(){4==c.readyState&&d({status:c.status,text:c.responseText})};c.send(a)};k.prototype.send=k.prototype.send;
+k.prototype.c=function(e,d,a){var b=this.a;b.open("POST",e,!0);b.setRequestHeader("Content-type","application/json");b.onreadystatechange=function(){4==b.readyState&&a({status:b.status,text:b.responseText})};b.send(d)};k.prototype.sendJson=k.prototype.c;k.prototype.b=function(e,d){var a=this.a;a.open("GET",e,!0);a.onreadystatechange=function(){4==a.readyState&&d({status:a.status,text:a.responseText})};a.send()};k.prototype.get=k.prototype.b;var l=function(e,d,a){var b=new k,c;for(c in e)b.parameters[c]=e[c];b.send(d,a)};g("gaia.accountchooser.sendXmlHttpRequest",l);g("G_sendXmlHttpRequest",l);
+</script>
+  <script>
+  var gaia = gaia || {};
+  gaia.bind = function(scope, fn) {
+  return function() {
+  fn.apply(scope, arguments);
+  };
+  };
+  gaia.AccountChooser = function(stringConfig) {
+  this.config_ = stringConfig;
+  this.inEditMode_ = false;
+  this.actionsList_ = document.getElementById('account-chooser-options');
+  this.accountList_ = document.getElementById('account-list');
+  this.loginForm_ = document.getElementById('gaia_loginform');
+  gaia_attachEvent(this.loginForm_, 'submit',
+  gaia.bind(this, this.handleFormSubmit_), false);
+  this.initRemoveLink_();
+  this.initRemoveListeners_();
+  this.initDoneLink_();
+  return this;
+  };
+  gaia.AccountChooser.prototype.initRemoveLink_ = function() {
+  var removeButtonWrapper = document.getElementById(
+  'account-chooser-remove-form');
+  this.addAccountLink_ = document.getElementById(
+  'account-chooser-add-account');
+  this.addAccountHref_ = this.addAccountLink_.href;
+  this.addAccountLink_.className = '';
+  this.addAccountWrapper_ = this.addAccountLink_.parentNode;
+  this.removeLink_ = document.createElement('a');
+  this.removeLink_.id = 'edit-account-list';
+  this.removeLink_.innerHTML = this.config_.removeText;
+  this.removeLink_.setAttribute('tabindex', '0');
+  this.removeLinkWrapper_ = document.createElement('li');
+  this.removeLinkWrapper_.appendChild(this.removeLink_);
+  gaia_attachEvent(this.removeLink_, 'click',
+  gaia.bind(this, this.toggleMode_), false);
+  gaia_attachEvent(this.removeLink_, 'keypress',
+  gaia.bind(this, this.toggleMode_), false);
+  if (removeButtonWrapper) {
+  this.actionsList_.removeChild(removeButtonWrapper);
+  }
+  this.actionsList_.className = 'dual-action';
+  this.actionsList_.appendChild(this.removeLinkWrapper_);
+  };
+  gaia.AccountChooser.prototype.initRemoveListeners_ = function() {
+  var accountItems = this.accountList_.getElementsByTagName('li');
+  for (var i = 0; i < accountItems.length; i++) {
+        var button = accountItems[i].getElementsByTagName('button')[0];
+        gaia_attachEvent(button, 'click',
+            gaia.bind(this,
+                this.sendRemoveRequestListener_(button.value)), false);
+        gaia_attachEvent(button, 'keypress',
+            gaia.bind(this,
+                this.sendRemoveRequestListener_(button.value)), false);
+      }
+    };
+
+
+    gaia.AccountChooser.prototype.initDoneLink_ = function() {
+      this.doneLink_ = document.createElement('a');
+      this.doneLink_.id = 'edit-account-list';
+      this.doneLink_.innerHTML = this.config_.doneText;
+      this.doneLink_.setAttribute('tabindex', '0');
+      this.doneLinkWrapper_ = document.createElement('li');
+      this.doneLinkWrapper_.appendChild(this.doneLink_);
+      gaia_attachEvent(this.doneLink_, 'click',
+          gaia.bind(this, this.toggleMode_), false);
+      gaia_attachEvent(this.doneLink_, 'keypress',
+          gaia.bind(this, this.toggleMode_), false);
+    };
+
+
+    gaia.AccountChooser.prototype.toggleMode_ = function() {
+      if (this.isEmpty_) {
+        return;
+      }
+
+      if (this.inEditMode_) {
+        this.accountList_.className = this.accountList_.className.substring(0,
+            this.accountList_.className.indexOf('edit-list'));
+        this.actionsList_.removeChild(this.doneLinkWrapper_);
+        this.actionsList_.className = 'dual-action';
+        this.actionsList_.appendChild(this.addAccountWrapper_);
+        this.actionsList_.appendChild(this.removeLinkWrapper_);
+        this.inEditMode_ = false;
+      } else {
+        this.accountList_.className += ' edit-list';
+        this.actionsList_.removeChild(this.removeLinkWrapper_);
+        this.actionsList_.removeChild(this.addAccountWrapper_);
+        this.actionsList_.className = '';
+        this.actionsList_.appendChild(this.doneLinkWrapper_);
+        this.inEditMode_ = true;
+      }
+    };
+
+
+    gaia.AccountChooser.prototype.handleFormSubmit_ = function(e) {
+      if (this.inEditMode_) {
+        if (e.preventDefault) {
+          e.preventDefault();
+        } else {
+          e.returnValue = false;
+        }
+      }
+      return !this.inEditMode_;
+    };
+
+
+    gaia.AccountChooser.prototype.sendRemoveRequestListener_ =
+        function(emailAddress) {
+      return function() {
+        if (this.inEditMode_) {
+          var params = [];
+          params['Email'] = emailAddress;
+          G_sendXmlHttpRequest(params, 'RemoveLocalAccount',
+              gaia.bind(this, this.handleRemoveResponse_(emailAddress)));
+
+        }
+      };
+    };
+
+
+    gaia.AccountChooser.prototype.handleRemoveResponse_ =
+        function(emailAddress) {
+      return function(response) {
+        if (response.status == 200) {
+          try {
+            var elem = document.getElementById('account-' + emailAddress);
+
+            if (elem) {
+              this.accountList_.removeChild(elem);
+              if (this.accountList_.getElementsByTagName('li').length == 0) {
+                this.createAndAppendEmptyNotice_();
+                this.updateDoneLinkActionForEmptyList_();
+              }
+            }
+          } catch (err) {};
+        }
+      };
+    };
+
+
+    gaia.AccountChooser.prototype.createAndAppendEmptyNotice_ =
+        function () {
+      var emptyNoticeNode = document.createElement('li');
+      emptyNoticeNode.className = 'removed-all-notice';
+      emptyNoticeNode.appendChild(document.createTextNode(
+          this.config_.removedAllText));
+      this.accountList_.appendChild(emptyNoticeNode);
+    }
+
+
+    gaia.AccountChooser.prototype.updateDoneLinkActionForEmptyList_ =
+        function() {
+      this.doneLink_.href = this.addAccountHref_;
+      this.isEmpty_ = true;
+    };
+
+  </script>
+  <script>
+  (function() {
+  var accountChooserConfig = {
+  removeText : 'Remove',
+  doneText : 'Done',
+  removedAllText :
+  'You\x27ve removed all accounts.'
+  }
+  new gaia.AccountChooser(accountChooserConfig);
+  })();
+  </script>
+  </body>
+</html>
+

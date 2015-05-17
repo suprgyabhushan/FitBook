@@ -1,0 +1,623 @@
+    <!DOCTYPE html>
+
+    <!--[if lt IE 7 ]> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js ie6"> <![endif]-->
+    <!--[if IE 7 ]> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js ie7"> <![endif]-->
+    <!--[if IE 8 ]> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js ie8"> <![endif]-->
+    <!--[if IE 9 ]> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js ie9"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js"> <!--<![endif]-->
+
+        <head>
+
+            <title>Connect with Fitbit</title>
+
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <meta name="keywords" content="keywords"/>
+            <meta name="viewport" content="width=1075"/>
+            
+
+            
+            <script type="text/javascript">
+                window.onerror = function (msg) {
+                    var headEl = document.getElementsByTagName("head")[0];
+                    headEl.setAttribute("data-js-error", msg);
+                }
+            </script>
+
+            <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
+            <!--[if IE]>
+            <link rel="stylesheet" type="text/css" href="https://static1.fitbit.com/simple.secure.s-css-css.he3d817567d614244cb73bae2a8e06120.pack?items=%2Fcss%2Fie.css" media="all" charset="utf-8"/>
+            <![endif]-->
+            <!--[if lt IE 9]>
+            <script type="text/javascript"  src="https://static1.fitbit.com/simple.s-jsclosure-js.h6e52a25dcabc47059692c993e3d8bf71.pack?items=%2Fjs%2Flib%2Fhtml5shiv%2Fhtml5shiv.js"  charset="utf-8" ></script>
+            <![endif]-->
+            <!--[if lte IE 7]>
+            <link rel="stylesheet" type="text/css" href="https://static0.fitbit.com/simple.secure.s-css-css.h22ca084feedb9bbae2d55f4645658e35.pack?items=%2Fcss%2Fie7.css" media="all" charset="utf-8"/>
+            <![endif]-->
+
+            <link rel="stylesheet" type="text/css" href="https://static1.fitbit.com/simple.secure.s-css-css.h2a57fc0ceb3099c79b73ef5497879070.pack?items=%2Fcss%2Fapp%2Foauth%2Foauth.css" charset="utf-8"/>
+
+            <script type="text/javascript"  src="https://static1.fitbit.com/combined.s-jsclosure-js.hc1e6a146eb5e7933182f04fa1444aa46.pack?items=%2Fjs%2Ffitbit.js%2C%2Fjs%2Ffitbit%2Fapp%2Futils%2FloadInlineScripts.js%2C%2Fjs%2Flib%2Fjquery%2F1.8.2%2Fjquery.min.js%2C%2Fjs%2Flib%2Fpolyfills%2Fjquery.placeholder.js"  charset="utf-8" ></script>
+
+            <script type="text/javascript">
+                window.CW = {};
+                CW.fancyCheckboxRadio = function(container){
+                    // Note: Should be applied inside backbone views separately
+                    container = container || $("body");
+                    var elems = container.find("input:checkbox, input:radio");
+                    elems
+                        .each(function(){
+                            var el = $(this);
+                            if (el.data("fancy-control-done")) return;
+
+                            el
+                                .toggleClass("checked", el.prop("checked"))
+                                .data("fancy-control-done", true);
+
+                            $("<div class='fancy-control-helper'></div>").insertAfter(el);
+
+                            el.filter("input:checkbox").on("change.fancy", function(){
+                                el.toggleClass("checked", el.prop("checked"));
+                                if ($.browser.msie && $.browser.version === "8.0") {
+                                    // IE8 fails to redraw control helper sometimes
+                                    // Code below forces helper to redraw
+                                    el.next(".fancy-control-helper").hide().show();
+                                }
+                            });
+
+                            el.filter("input:radio").on("change.fancy", function(){
+                                container.find("input:radio[name='" +el.attr("name")+ "']").toggleClass("checked", !el.prop("checked"));
+                                el.toggleClass("checked", el.prop("checked"));
+                            });
+                        });
+                };
+
+                $(function(){
+                    CW.fancyCheckboxRadio($(document.body));
+                    $("input[placeholder]").placeholder();
+                    if ($(".error").length) {
+                        $(document.body).click(function(){
+                            $(".error").hide();
+                        });
+                    }
+                });
+            </script>
+
+            
+
+        </head>
+
+        <body class="">
+
+        
+        <script type="text/javascript">
+    // Here are list of domains tracking by GA
+    if (typeof _ga_tracking_domains == "undefined") {
+        var _ga_tracking_domains = ['blog.fitbit.com', 'help.fitbit.com'];
+    }
+</script>
+
+        <div class="background"></div>
+        <div class="preloader"><i></i></div>
+
+        <div class="outer">
+            <div class="middle">
+                <table class="content with-promo">
+                <tr>
+                    <td rowspan="2"><div class="spreader"></div></td>
+                    <td class="main">
+                        
+                        
+            
+
+
+
+
+
+
+
+
+
+    
+    
+        <img src="https://static1.fitbit.com/simple.b-cssdisabled-png.h76d53d8e6a0653b38326a825b2b9cf57.pack?items=%2Fimages%2Fcommon%2Fbg_branding_b.png" class="logo" width="114" height="28" alt="Fitbit"/>
+    
+
+
+<div class="not-logged-auth">
+    <div class="info">
+        
+            
+            
+                <span class="api-name">GoogleFeedBit</span> by Leimi would like to access your profile and data on Fitbit.com:
+            
+        
+    </div>
+
+    
+    
+    
+        
+
+
+<script type="text/javascript">
+    // TODO: Move this to separate js file
+    $(function(){
+        $(".access-flag").each(function(){
+            var flag = $(this),
+                ie8 = $.browser.msie && $.browser.version === "8.0" ,
+                infoEl = $(".content .info"),
+                flagWrapper = flag.parent(),
+                flagHeading = flag.children(".heading"),
+                flagDescription = flag.children(".description"),
+                flagCollapsedHeight = flagHeading.outerHeight(),
+                flagMinHeightModifier = 22,
+                flagMinHeight = flagCollapsedHeight + infoEl.height() + flagMinHeightModifier,
+                flagTotalHeight = Math.max(flagMinHeight, (flagCollapsedHeight + flagDescription.outerHeight())), // this value maybe incorrect on document ready
+                init = function(){
+                    flag.add(flagWrapper).css({
+                        height: flagCollapsedHeight
+                    });
+                },
+                slideSpeed = 200,
+                toggle = function(e){
+                    e.stopPropagation(); e.preventDefault();
+                    if (infoEl.is("animated") || flag.is(":animated")) return false;
+                    var expanded = flag.height() >= flagTotalHeight;
+                    if (!ie8) {
+                        infoEl.animate({
+                            opacity: expanded ? 1 : 0
+                        }, slideSpeed);
+                    }
+                    flag.toggleClass("expanded", !expanded);
+                    flag.delay(expanded ? 0 : 50).animate({
+                        height: expanded ? flagCollapsedHeight : flagTotalHeight
+                    }, slideSpeed);
+                };
+
+            init();
+            setTimeout(function(){
+                // updates dimensions on random timeout
+                flagMinHeight = flagCollapsedHeight + infoEl.height() + flagMinHeightModifier;
+                flagTotalHeight = Math.max(flagMinHeight, (flagCollapsedHeight + flagDescription.outerHeight()));
+            }, 150);
+            $(window).load(function(){
+                // updates dimensions here after fonts are fully loaded
+                flagMinHeight = flagCollapsedHeight + infoEl.height() + flagMinHeightModifier;
+                flagTotalHeight = Math.max(flagMinHeight, (flagCollapsedHeight + flagDescription.outerHeight()));
+            });
+            flag.on("click touchstart", toggle);
+        });
+    });
+</script>
+
+
+    <div class="access-flag-wrapper">
+        <div class="access-flag write uppercase">
+            <div class="heading">
+                <div class="toggle"></div>
+                <i></i><span>Read and update access</span>
+            </div>
+            <div class="description">
+                <p>Application will be able to read and update: activity, sleep and food entries, body and weight info, friends, groups and your device data.</p>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+    <div class="active-block">
+        
+
+
+
+
+
+
+
+
+
+
+
+<form id="oauth_login_form" name="oauth" action="/oauth/oauth_login_allow" method="POST">
+    <input name="oauth_token" value="ebbb461e66558c2d798c3345d301a24a" type="hidden" />
+    <input name="locale" value="" type="hidden" />
+    <input name="display" value="" type="hidden" />
+    
+
+            
+
+            
+
+            <input type="text" placeholder="Email" id="email" name="email" value=""/>
+            <input type="password" placeholder="Password" id="password" name="password"/>
+
+            <div class="controls">
+                <div class="blue-link uppercase left"><a href="/oauth/restore?
+
+oauth_token=ebbb461e66558c2d798c3345d301a24a">Forgot password?</a></div>
+                <div class="uppercase right submit-button"><input id="oauth_allow" type="submit" value="Allow"/></div>
+            </div>
+        
+<div style="display: none;"><input type="hidden" name="_sourcePage" value="q52CXXupgfTGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKyqzpfBpGzBwTKIuNMgn5lyAHyJYxmkph4q0_dKcs8oOew-soja6P5GkVaU0Nl2CuyeAqH0duL3JQ==" /><input type="hidden" name="__fp" value="SQ4J2B1HeKo=" /></div></form>
+
+    </div>
+</div>
+
+
+
+        
+                    </td>
+                    
+                        
+
+
+
+
+
+
+
+<td class="weightsite-promo-wrapper">
+    <div class="weightsite-promo">
+        <div class="header">Not using Fitbit yet?</div>
+        <img src="https://static1.fitbit.com/simple.b-cssdisabled-jpg.hc92794d9bc6d358996e9417c37660ed1.pack?items=%2Fimages%2Fauthenticate%2Foauth_promo.jpg" />
+        <ul class="uppercase">
+            <li class="activity"><i></i><span class="promo-feature">Track activity &amp; sleep</span></li>
+            <li class="weight"><i></i><span class="promo-feature">Manage weight</span></li>
+            <li class="progress"><i></i><span class="promo-feature">Watch your progress</span></li>
+        </ul>
+        <div class="promo-details">Fitbit motivates you to turn fitness into lifestyle, challenge friends, set goals, and watch your progress.<a href="http://www.fitbit.com" target="_blank">Learn more about Fitbit</a></div>
+    </div>
+</td>
+
+                    
+                </tr>
+                <tr>
+                    <td class="main-footer">
+                        
+            <div class="notice">You can revoke this application's access from your Fitbit account settings.</div>
+        
+                    </td>
+                    
+                    <td class="promo-footer">
+                        
+            
+
+
+
+
+
+
+<div class="footer default-promo">
+    
+        <div class="promo-link uppercase">
+            <a href="/oauth/signup?
+
+oauth_token=ebbb461e66558c2d798c3345d301a24a" target="_blank">Create a new account</a><i></i>
+        </div>
+    
+<div class="footer">
+
+        
+                    </td>
+                    
+                </tr>
+                </table>
+            </div>
+        </div>
+
+        
+            
+                
+            
+            
+        
+
+        
+        
+
+        <script type="text/javascript"  src="https://static0.fitbit.com/combined.s-jsclosure-js.h1e0e8aedca9c2d384d274f6fffa28c4e.pack?items=%2Fjs%2Ftracking%2Fmixpanel_manager.js%2C%2Fscripts%2Flibs%2Fua-parser%2Fua-parser.js"  charset="utf-8" ></script><script type="text/javascript">
+
+
+if (window.thirdPartyTrackingDisabled) {
+    window.mixpanel = [];
+    window.mixpanel.init = function () {
+    };
+    window.mixpanel.track = function () {
+    };
+} else {
+    (function (c, a) {
+        window.mixpanel = a;
+        var b, d, h, e;
+        b = c.createElement("script");
+        b.type = "text/javascript";
+        b.async = !0;
+        b.src = ("https:" === c.location.protocol ? "https:" : "http:") +
+                '//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';
+        d = c.getElementsByTagName("script")[0];
+        d.parentNode.insertBefore(b, d);
+        a._i = [];
+        a.init = function (b, c, f) {
+            function d(a, b) {
+                var c = b.split(".");
+                2 == c.length && (a = a[c[0]], b = c[1]);
+                a[b] = function () {
+                    a.push([b].concat(
+                            Array.prototype.slice.call(arguments, 0)))
+                }
+            }
+
+            var g = a;
+            "undefined" !== typeof f ? g = a[f] = [] :
+                    f = "mixpanel";
+            g.people = g.people || [];
+            h = ['disable', 'track', 'track_pageview', 'track_links',
+                'track_forms', 'register', 'register_once', 'unregister', 'identify', 'alias', 'name_tag',
+                'set_config', 'people.set', 'people.increment', 'people.track_charge', 'people.append'];
+            for (e = 0; e < h.length; e++)d(g, h[e]);
+            a._i.push([b, c, f])
+        };
+        a.__SV = 1.2;
+    })(document, window.mixpanel || []);
+}
+
+var mpqMasterPrj = "82d19845b298fcc8b8713861c9cf67c0";
+var mpqSignupPrj = "6d8c58bf820d35c347bf4c80b85dfa87";
+var mpqDashboardPrj = "f1d7f147cdb73c164d5e1e29f7cda229";
+var mpqOrderPrj = "c3eb4cb5809febf58e295eecc018cede";
+var mpqBadgesPrj = "fb8136a98d2f93dd1602e7c18ebada3e";
+var mpqDevicesPrj = "36a318763296893f99f0328620b31720";
+var mpqWebsitePrj = "0c603dde37e11848bf8ba55a855f9d1a";
+var mpqSocialFeaturesPrj = "c7ba2a7fc10a15f9eb140af80c730653";
+var mpqCWPrj = "2a509160f60d33578a765e88afebee24";
+var mpqSfsPrj = "6d8c58bf820d35c347bf4c80b85dfa87";
+
+var mpqQAPrj = "45b3cbfc56ddb35a099bc7f38fc74f4c"; // QA Project
+
+
+if (!(document.location.host === "www.fitbit.com" || document.location.host === "api.fitbit.com")) {
+    mpqMasterPrj = mpqSignupPrj = mpqDashboardPrj = mpqOrderPrj = mpqBadgesPrj = mpqDevicesPrj = mpqWebsitePrj = mpqSocialFeaturesPrj = mpqCWPrj = mpqSfsPrj = mpqQAPrj;
+}
+
+Mixpanel.getMixpanelConfig = function (namespace, trackPageView) {
+    return {
+        cookie_name: "mp_cookie",
+        cross_subdomain_cookie: false,
+        track_links_timeout: 500,
+        upgrade: true,
+        track_pageview: trackPageView,
+//        debug:true,
+        loaded: function(){
+            
+        }
+    };
+};
+
+var mpq = new Mixpanel.Manager({
+    'default': mpqMasterPrj,
+    projects: [
+        {
+            token: mpqWebsitePrj,
+            config: Mixpanel.getMixpanelConfig()
+        },
+        {
+            token: mpqSignupPrj,
+            config: Mixpanel.getMixpanelConfig('signup', false),
+            namespace: 'signup'
+        },
+        {
+            token: mpqDashboardPrj,
+            config: Mixpanel.getMixpanelConfig('dashboard', false),
+            namespace: 'dashboard'
+        },
+        {
+            token: mpqOrderPrj,
+            config: Mixpanel.getMixpanelConfig('order', false),
+            namespace: 'order'
+        },
+        {
+            token: mpqBadgesPrj,
+            config: Mixpanel.getMixpanelConfig('badges', false),
+            namespace: 'badges'
+        },
+        {
+            token: mpqDevicesPrj,
+            config: Mixpanel.getMixpanelConfig('devices', false),
+            namespace: 'devices'
+        },
+        {
+            token: mpqSocialFeaturesPrj,
+            config: Mixpanel.getMixpanelConfig('social', false),
+            namespace: 'social'
+        },
+        {
+            token: mpqCWPrj,
+            config: Mixpanel.getMixpanelConfig('corporatewellness', false),
+            namespace: 'corporatewellness'
+        },
+        {
+            token: mpqSfsPrj,
+            config: Mixpanel.getMixpanelConfig('sfs', false),
+            namespace: 'sfs'
+        },
+        {
+            token: mpqQAPrj,
+            config: Mixpanel.getMixpanelConfig('qa', false),
+            namespace: 'qa'
+        }
+    ]
+});
+
+
+(function() {
+    for (var p in mpq.projects) {
+        if (mpq.projects.hasOwnProperty(p)) {
+            mpq.projects[p].push(["register", {"city": "", "country": "", "interface": "", "member": "", "state": "", "timezone": "", "Api Usage": "", "City": "", "State": "", "Member": "", "Tracker": ""}, "all"]);
+            mpq.projects[p].push(["register", {"Locale": "US"}, "all", 90]);
+            mpq.projects[p].push(["register", {"LocaleLang": "en_US"}, "all", 90]);
+            mpq.projects[p].push(["register", {"LocaleReal": "IN"}, "all", 90]);
+
+            
+            mpq.projects[p].push(["register", {"Loggedin": "False"}, "all", 90]);
+            
+        }
+    }
+})();
+
+
+(function () {
+    mpq.registerProject({
+        token: mpqMasterPrj,
+        config: Mixpanel.getMixpanelConfig('master', false),
+        namespace: 'master'
+    });
+
+    var props = {"Environment":"prod","Logged In":false};
+    var userAgent = new UAParser(),
+            os = userAgent.getOS(),
+            osVersion = [os.name, os.version].join(' ');
+
+    props['Platform'] = 'Web';
+    props['Locale'] = 'en_US';
+    props['Operating System Version'] = osVersion;
+
+    mpq.getProject(mpqMasterPrj).push(['register', props]);
+})();
+
+fitbit.loadInlineScript(function () {
+
+    
+    $(function () {
+        
+        mpq.push(["track_links",
+            "a#mpq-link-cart-Header",
+            "OrderCart: Start",
+            {
+                "!SOURCE": "Header",
+                "!PAGE": document.location.pathname,
+                "token": mpqMasterPrj
+            }
+        ]);
+        mpq.push(["track_links",
+            "a#mpq-link-cart-Footer",
+            "OrderCart: Start",
+            {
+                "!SOURCE": "Footer",
+                "!PAGE": document.location.pathname,
+                "token": mpqMasterPrj
+            }
+        ]);
+        mpq.push(["track_links",
+            "li.mpq-link-cart-MainMenu a",
+            "OrderCart: Start",
+            {
+                "!SOURCE": "Main Menu",
+                "!PAGE": document.location.pathname,
+                "token": mpqMasterPrj
+            }
+        ]);
+
+        
+
+
+        mpq.push(["track_forms", ".cart_form", "OrderCart: Next", function () {
+            var source = "Payment Form";
+
+            if ($('ul.errorList li').size()) {
+                source += " - Errors"
+            }
+            return {
+                "!SOURCE": source,
+                "!PAGE": document.location.pathname,
+                "token": mpqMasterPrj
+            };
+        }]);
+
+
+        $("#you_might_like .add").click(function () {
+
+            // TODO: should thie be in mixPanelCart.jsp?
+            var promoCode = $(".empty_cart").eq(0).attr("data-promo-code") || undefined;
+            var hasPromo = "NO";
+            if (undefined != promoCode) {
+                hasPromo = "YES";
+            }
+            console.debug("Added " + $(this).attr('data-product-id') + " with code " + hasPromo);
+            mpq.push(["track",
+                "OrderCart:  xSell Click",
+                {
+                    "!PRODUCT": $(this).attr('data-product-id'),
+                    "!PROMOCART": hasPromo,
+                    "!PAGE": document.location.pathname,
+                    "token": mpqMasterPrj
+                }
+            ]);
+        });
+
+        $(".orderSummary").find("input[type=submit].right").click(function () {
+            mpq.push(["track",
+                "OrderCart: PlaceOrder",
+                {
+                    "!SOURCE": "Order Confirmation Form",
+                    "!PAGE": document.location.pathname,
+                    "token": mpqMasterPrj
+                }
+            ]);
+        });
+
+        
+        $('.hdr-login').on('click', function () {
+            mpq.push(['track',
+                'User: Login',
+                {
+                    "!PAGE": document.location.pathname,
+                    "token": mpqMasterPrj
+                }
+            ]);
+        });
+
+        $('.hdr-setup').on('click', function () {
+            mpq.push(["track",
+                'User: Setup',
+                {
+                    "!PAGE": document.location.pathname,
+                    "token": mpqMasterPrj
+                }
+            ]);
+        });
+        
+
+    });
+    
+});
+</script>
+
+        <script type="text/javascript">
+            (function(){
+                var oauthSet = {
+                    '!OAUTH_APP_NAME': 'GoogleFeedBit',
+                    '!OAUTH_APP_ID': '229KBR',
+                    
+                    '!SOURCE': 'Web',
+                    'token': mpqMasterPrj
+                };
+                mpq.push(['track_links',
+                    '.promo-details a',
+                    'OAuth: Learn more',
+                    oauthSet
+                ]);
+                $(".access-flag").one("click", function(){
+                    mpq.push(['track',
+                        'OAuth: Permissions description',
+                        oauthSet
+                    ]);
+                });
+            })();
+        </script>
+
+        </body>
+    </html>
+
+
